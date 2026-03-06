@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Chúc Mừng Ngày 8/3 - Lớp H8 🌸</title>
+    <meta name="description"
+        content="Trang web chúc mừng Ngày Quốc tế Phụ nữ 8/3 dành cho cô giáo và các bạn nữ lớp H8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ======================== LOGIN PAGE ======================== -->
+    <div id="login-page">
+        <div class="login-particles" id="loginParticles"></div>
+        <div class="login-container">
+            <div class="login-logo">🌸</div>
+            <h1 class="login-title">Happy Women's Day</h1>
+            <p class="login-subtitle">✦ Chào mừng ngày 8 tháng 3 ✦</p>
+            <div class="login-box">
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="passwordInput" placeholder="Nhập mật khẩu để mở quà..."
+                        autocomplete="off">
+                </div>
+                <button class="login-btn" id="loginBtn" onclick="attemptLogin()">
+                    <i class="fas fa-gift"></i> Mở Hộp Quà Bí Mật
+                </button>
+                <p class="login-error" id="loginError">
+                    <i class="fas fa-exclamation-circle"></i> Sai mật khẩu rồi! Thử lại nhé 💕
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== CINEMATIC INTRO ======================== -->
+    <div id="cinematic-intro">
+        <canvas id="fireworksCanvas"></canvas>
+        <div class="intro-content">
+            <!-- Animated Envelope -->
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body"></div>
+                    <div class="letter-popup">💌 Bạn có một lá thư yêu thương!</div>
+                </div>
+            </div>
+            <p class="envelope-hint" id="envelopeHint">👆 Chạm vào lá thư để mở 💌</p>
+
+            <!-- Big Date Reveal -->
+            <div class="big-date" id="bigDate">8/3</div>
+            <p class="intro-subtitle" id="introSub">Ngày Quốc tế Phụ nữ</p>
+
+            <!-- Typewriter Message -->
+            <div class="typewriter-text" id="typewriterText"></div>
+
+            <!-- Enter Button -->
+            <button class="enter-btn" id="enterBtn" onclick="enterMainPage()">
+                <i class="fas fa-arrow-right"></i> Xem Lời Chúc
+            </button>
+        </div>
+    </div>
+
+    <!-- ======================== STORY INTERMISSION ======================== -->
+    <div id="story-screen">
+        <div class="story-text-container" id="storyScreenText"></div>
+        <button class="skip-btn" id="skipStoryBtn" onclick="finishStoryScreen()">Tiếp tục <span>›</span></button>
+    </div>
+
+    <!-- ======================== MAIN PAGE ======================== -->
+    <div id="main-page">
+        <div class="top-controls">
+            <button class="theme-btn" id="themeToggleBtn" onclick="toggleTheme()">
+                <i class="fas fa-sun"></i> Giao Diện
+            </button>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Thoát
+            </button>
+        </div>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="teacher" onclick="switchTab('teacher')">
+                <i class="fas fa-chalkboard-teacher"></i> Dành Cho Cô
+            </button>
+            <button class="tab-btn" data-tab="classmates" onclick="switchTab('classmates')">
+                <i class="fas fa-users"></i> Các Bạn Nữ
+            </button>
+        </nav>
+
+        <div class="content-area">
+            <!-- ========== TEACHER TAB ========== -->
+            <div class="tab-content active" id="tab-teacher">
+                <div class="teacher-section">
+                    <div class="section-header">
+                        <div class="emoji-line">🌷 💐 🌹</div>
+                        <h1>Kính Tặng Cô Ngọc Dung</h1>
+                        <p>Cô Nguyễn Thị Ngọc Dung — GVCN lớp H8</p>
+                        <div class="countdown-bar" id="countdownBar"></div>
+                    </div>
+
+                    <div class="teacher-card">
+                        <div class="flower-border">🌸 🌺 🌼 🌻 🌸 🌺 🌼</div>
+                        <h2 class="greeting-title">💌 Lời Chúc Từ Tập Thể Lớp H8</h2>
+                        <div class="heart-divider">💗 💗 💗 💗 💗</div>
+
+                        <p class="greeting-text">
+                            Kính gửi <em>Cô Ngọc Dung</em> – người luôn tận tụy, yêu thương và dẫn dắt chúng em mỗi ngày
+                            trên con đường tri thức. 🌟
+                        </p>
+                        <p class="greeting-text">
+                            Nhân ngày <em>Quốc tế Phụ nữ 8/3</em>, tập thể lớp H8 xin gửi đến Cô những lời chúc tốt đẹp
+                            nhất. Chúc Cô luôn <em>mạnh khỏe, hạnh phúc</em> và giữ mãi nụ cười rạng rỡ! 🌹
+                        </p>
+                        <p class="greeting-text">
+                            Cảm ơn Cô vì tất cả sự <em>kiên nhẫn, tận tâm</em> và những bài học quý giá. Cô không chỉ là
+                            giáo viên mà còn là <em>người mẹ thứ hai</em> của chúng em! 💕
+                        </p>
+
+                        <div class="heart-divider">✨ 💖 ✨</div>
+                        <p class="signature">— Với tất cả tình yêu thương,<br>Tập thể lớp H8 🌸</p>
+                    </div>
+
+                    <div class="quote-card">
+                        <div class="quote-icon">✨</div>
+                        <blockquote>"Phía sau mỗi học sinh thành công luôn có bóng dáng của một người Cô tuyệt vời"
+                        </blockquote>
+                        <p class="quote-author">— Lớp H8 kính tặng Cô Ngọc Dung 🌷</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CLASSMATES TAB ========== -->
+            <div class="tab-content" id="tab-classmates">
+                <div class="classmates-section">
+                    <div class="classmates-banner">
+                        <h2>🌸 Gửi Đến Các Bạn Nữ Lớp H8 🌸</h2>
+                        <p>
+                            Nhân ngày 8/3, xin gửi đến 19 bạn nữ xinh đẹp nhất lớp H8
+                            <br>những lời chúc yêu thương và ngọt ngào nhất! 💕
+                        </p>
+                    </div>
+
+                    <!-- SIDE-BY-SIDE for TV -->
+                    <div class="tv-layout">
+                        <div class="tv-wish-panel">
+                            <div class="group-wish">
+                                <h3>✨ Lời Chúc Chung ✨</h3>
+                                <p>
+                                    Gửi đến tất cả các bạn nữ lớp H8 – những bông hoa đẹp nhất! 🌸
+                                    <br><br>
+                                    Chúc các bạn luôn <strong style="color:var(--pink)">xinh đẹp</strong>,
+                                    <strong style="color:var(--gold)">tự tin</strong>,
+                                    <strong style="color:var(--purple)">tỏa sáng</strong>
+                                    và luôn được yêu thương trọn vẹn! 💕
+                                    <br><br>
+                                    Cảm ơn các bạn vì luôn làm cho lớp mình thêm rực rỡ và tràn ngập tiếng cười! 😊✨
+                                </p>
+                                <div class="wish-emojis">🌸 🌺 🌷 💐 🌹 🌻 🌼</div>
+                                <p style="margin-top:16px;">
+                                    <em style="color:var(--text-muted)">— Từ những chàng trai lớp H8 🌹</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tv-names-panel">
+                            <div class="girls-grid" id="girlsGrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Petal Canvas -->
+    <canvas id="petalCanvas"></canvas>
+
+    <!-- Music Button -->
+    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
