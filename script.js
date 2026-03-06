@@ -34,7 +34,7 @@ const wishes = [
     "Tuyệt vời và đáng yêu! 🌈",
     "Luôn là niềm tự hào! 🏆",
     "Mãi dịu dàng, mãi xinh! 🥰",
-    "Đẹp cả ngoài lẫn trong! 💎",
+    "Xinh đẹp, tươi trẻ! 💎",
     "Nụ cười ấm áp nhất! 🌞",
     "Luôn thật vui và khỏe! 🌻",
     "Ngày nào cũng tươi tắn! 🌼",
