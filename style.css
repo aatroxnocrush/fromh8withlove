@@ -706,7 +706,8 @@ body {
 
 .section-header p {
     color: var(--text-muted);
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
 }
@@ -765,7 +766,8 @@ body {
 
 .teacher-card .greeting-text {
     color: var(--text-main);
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 2.1;
     max-width: 650px;
     margin: 0 auto 15px;
@@ -830,7 +832,7 @@ body {
 
 .quote-card blockquote {
     font-family: 'Dancing Script', cursive;
-    font-size: 24px;
+    font-size: 26px;
     color: var(--text-main);
     line-height: 1.6;
 }
